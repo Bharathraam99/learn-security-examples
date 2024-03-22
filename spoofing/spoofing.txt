@@ -1,1 +1,20 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerability in the initial code lies in the lack of security measures against Cross-Site Request Forgery (CSRF) attacks and session hijacking.
+
+In the initial code:
+- The server doesn't implement CSRF protection, allowing attackers to perform actions on behalf of authenticated users without their consent.
+- The session cookie is not marked as `httpOnly` and lacks the `SameSite` attribute, making it susceptible to session hijacking via client-side script execution.
+
+The secure version addresses these vulnerabilities:
+- It ensures that the session cookie is marked as `httpOnly`, preventing client-side JavaScript from accessing it, thereby mitigating session hijacking.
+- It includes the `SameSite` attribute in the session cookie, which restricts the cookie to be sent only in first-party contexts, protecting against CSRF attacks.
+- Additionally, the secret key for session encryption is passed as a command-line argument, enhancing the security of session management.
+
+Spoofing violates the Confidentiality and Integrity CIA (Confidentiality, Integrity, and Availability) properties:
+
+Confidentiality: Spoofing attacks can compromise the confidentiality of data by allowing unauthorized access to sensitive information. For example, in a spoofing attack, an attacker might impersonate a legitimate user or system to gain access to confidential data.
+
+Integrity: Spoofing attacks can undermine the integrity of data by allowing unauthorized parties to modify or manipulate it. For instance, an attacker might spoof the identity of a trusted source to send malicious data or commands, leading to unauthorized changes to data or system settings.
+
+By impersonating legitimate entities or sources, spoofing attacks can deceive systems or users into disclosing sensitive information or accepting unauthorized actions, thus compromising the confidentiality and integrity of data and systems.

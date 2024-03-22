@@ -1,0 +1,13 @@
+Tampering Vulnerability and Prevention:
+
+Vulnerability Explanation:
+The vulnerability in the provided code lies in the lack of proper sanitization of user input in the `/register` route. Specifically, the user's input is accepted without any validation or sanitization, making the application susceptible to HTML injection attacks. Without proper sanitization, an attacker could inject malicious HTML or JavaScript code into the input field, leading to potential Cross-Site Scripting (XSS) vulnerabilities.
+
+Secure Version Prevention:
+To prevent this vulnerability, the secure version of the code implements a `escapeHTML` function. 
+This function properly escapes special HTML characters such as `<`, `>`, `&`, `"`, and `'` in the user input before rendering it back to the client. By escaping these characters, the secure version ensures that any injected HTML or JavaScript code is treated as plain text and not executed by the browser. Thus, the secure version mitigates the risk of HTML injection and prevents potential XSS attacks.
+
+CIA Property Violated by Tampering:
+
+Tampering violates the Integrity CIA (Confidentiality, Integrity, and Availability) property:
+- Integrity: Tampering attacks compromise the integrity of data by allowing unauthorized modifications. In this case, the lack of proper input sanitization allows attackers to tamper with the application's data or functionality by injecting malicious code. By implementing measures to prevent tampering, such as proper input validation and sanitization, the application can maintain the integrity of its data and ensure that it remains accurate and reliable.
