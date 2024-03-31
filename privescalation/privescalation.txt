@@ -1,0 +1,12 @@
+Vulnerability Explanation:
+- Original code lacks proper authentication and authorization.
+- Allows unauthorized users to upgrade their roles.
+
+Secure Version:
+- Uses session-based authentication and authorization.
+- Prevents unauthorized role upgrades.
+
+Additional Security Mechanisms:
+- Role-Based Access Control (RBAC).
+- Input Validation.
+- Audit Logging.

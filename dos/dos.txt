@@ -1,2 +1,18 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Vulnerability Explanation:
+- Original code uses user-provided values directly.
+- Allows attackers to send crafted requests.
+- Can lead to server overload or crash.
+
+Secure Version:
+- Includes error handling with try-catch.
+- Prevents server crash on bad input.
+- Ensures server availability during errors.
+
+Additional Security Mechanisms:
+- Implement rate limiting.
+- Validate and sanitize user input.
+- Monitor server resources.
+- Use circuit breaker pattern.

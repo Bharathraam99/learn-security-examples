@@ -1,3 +1,16 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+Vulnerability Explanation:
+- Original code lacks input validation and sanitization.
+- Direct usage of user input in queries exposes to NoSQL injection.
+Secure Version:
+- Implements input validation and sanitization.
+- Checks and sanitizes username input to prevent injection attacks.
+CIA Property Violated:
+- Confidentiality compromised due to potential unauthorized access.
+Additional Security Mechanisms**:
+- Authentication and Authorization for user control.
+- HTTPS for encrypted data transmission.
+- Security Headers to mitigate common web vulnerabilities.

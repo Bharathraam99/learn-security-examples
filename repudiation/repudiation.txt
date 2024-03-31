@@ -1,2 +1,15 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Vulnerability Explanation:
+- Insecure version allows users to send messages without authentication.
+- Lack of accountability enables users to deny their actions.
+
+Secure Version:
+- Secure version logs all user actions.
+- Messages include user information for accountability.
+
+Additional Security Mechanisms:
+- User Authentication.
+- Message Integrity Checks.
+- Audit Trail Analysis.
